@@ -9,7 +9,7 @@ function App() {
       <Todo text='Master React'/>
       <Todo text='Explore the full React course'/>
 
-      {/* testing
+      {/* testing hello
       */}
       <div className="card2">
         <h2>TITLE</h2>
