@@ -10,7 +10,7 @@ function Todo(props) {
 
 
     {/*
-    This is good for debugging  
+    This is good for debugging 1/16 
   */}
     console.log('CLicked');
     console.log(props.text)
