@@ -11,7 +11,7 @@ function Modal(props){
     <p>Are you sure?</p>
 
     {/*
-    both work the same way with props.onCancel part and the confirmHandler part
+    both work the same way with props.onCancel part and the confirmHandler part, props.onCancel goes back to the Todo.js file and uses the function there
   */}
     <button className="btn btn--alt" onClick={props.onCancel}>Cancel</button>
     <button className="btn" onClick={confirmHandler}>Confirm</button>
