@@ -29,14 +29,15 @@ function AllMeetupsPage() {
 
       {/**
        * this is example how getting the information from the dummy data
-          <ul>
-            {DUMMY_DATA.map((meetup) => {
-              return <li key={meetup.id}>
-                {meetup.title}
-              </li>
-            })}
-          </ul>
+        <ul>
+          {DUMMY_DATA.map((meetup) => {
+            return <li key={meetup.id}>
+              {meetup.title}
+            </li>
+          })}
+        </ul>
        */}
+
 
     </section>
 
