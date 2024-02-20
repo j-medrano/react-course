@@ -1,25 +1,27 @@
-import Todo from "./components/Todo";
+import { Route, Routes } from 'react-router-dom';
 
-
+import AllMeetupsPage from './pages/AllMeetups';
+import FavoritesPage from './pages/Favorites';
+import NewMeetupsPage from './pages/NewMeetups';
+import Layout from './components/layout/Layout';
 function App() {
   return (
-    <div>
-      <h1> My Todos</h1>
-      <Todo text='Learn React'/>
-      <Todo text='Master React'/>
-      <Todo text='Explore the full React course'/>
 
-      {/* testing hello
-      */}
-      <div className="card2">
-        <h2>TITLE</h2>
-        <div>
-          <button>Delete</button>
-        </div>
-      </div>
-
-    </div>
-    
+    /*
+    this is react v6. this uses routes. the guy in the video uses v5 react with switch
+    */
+    <Layout>
+      <switch>
+        <Routes>
+          <Route path='/' element={<AllMeetupsPage />}>
+          </Route>
+          <Route path='/new-meetup' element={<NewMeetupsPage />}>
+          </Route>
+          <Route path='/favorites' element={<FavoritesPage />}>
+          </Route>
+        </Routes>
+      </switch>
+    </Layout>
   );
 }
 
