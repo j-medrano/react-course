@@ -1,7 +1,10 @@
-import { json } from "react-router-dom";
+import React from "react";
+
+import { useNavigate } from "react-router-dom";
 import NewMeetupForm from "../components/meetups/NewMeetupForm";
 
 function NewMeetupsPage() {
+  const navigate = useNavigate();
 
   function addMeetupHandler(meetupData) {
     fetch(
@@ -10,11 +13,13 @@ function NewMeetupsPage() {
         method: 'POST',
         body: JSON.stringify(meetupData),
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         }
 
       }
-    );
+    ).then(() =>{
+      navigate('/');
+    });
   }
   return <section>
     <h1>Add New Meetup</h1>
